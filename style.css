@@ -12,17 +12,39 @@ body {
     color: #fff;
 }
 
+body::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: url('images/deco1.svg') no-repeat;
+    position: absolute; 
+    left: 70%;
+    top: -15%;
+}
+
+p {
+    line-height: 2.5;
+    color: rgba(255, 255, 255, 0.53)
+}
+
+h4 {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    color:rgba(255, 255, 255, 0.5)
+}
+
 /***** Header and nav *****/
 header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 30px 100px;
+    padding: 40px 120px;
 }
 
 .logo {
-    width: 121px;
-    height: 38px;
+    width: 170px;
 }
 
 nav {
@@ -36,17 +58,36 @@ nav {
 nav a {
     text-decoration: none;
     font-family: 'Barlow', sans-serif;
-    font-size: 14px;
+    font-size: 20px;
+    /* 14px → 20 px */
     color: #fff;
 }
 
 /***** Intro section *****/
-.intro {
+.intro-text {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 40%;
     gap: 30px;
     margin: 50px 10%;
+}
+
+.intro-text::before {
+    content: '';
+    width: 150px;
+    height: 150px;
+    background: url('images/deco3.svg') no-repeat;
+    position: absolute;
+    transform: translate(-50px, -50px);
+}
+
+.intro-text::after {
+    content: '';
+    width: 100%;
+    height: 190px;
+    background: url('images/deco2.svg') no-repeat;
+    /* position: absolute; */
+    /* transform: translate(300px, -50px); */
 }
 
 .intro h1 {
@@ -67,6 +108,7 @@ nav a {
     font-weight: 300;
     letter-spacing: 4.5%;
     color: #EFEFEF;
+    
 }
 
 button {
@@ -87,14 +129,20 @@ button {
 .mid {
     display: grid;
     grid-template-columns: 40% 40%;
-    /* TODO: Display grid */
+    justify-content: center;
+    gap: 5%;
 }
 
-.mid h3 {
+.mid-grid {
+    width: 80%;
+}
+
+/* .mid h3 {
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 3px;
-}
+    margin-bottom: 20px;
+} */
 
 .mid h1 {
     font-family: 'Barlow Condensed', sans-serif;
@@ -104,11 +152,155 @@ button {
 
 .mid h2 {
     font-weight: 400;
-    font-size: 20px
+    font-size: 20px;
+    margin: 40px 0;
 }
 
 .mid p {
     font-weight: 400;
     font-size: 16px;
     color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 30px;
+}
+
+/***** Top articles *****/
+.articles {
+    margin: 40px 0;
+}
+
+.top-articles {
+    width: 40%;
+    margin: auto;
+    text-align: center;
+}
+
+/* .top-articles h3 {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+} */
+
+.top-articles h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 300;
+    font-size: 56px;
+}
+
+.top-articles p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/***** Articles *****/
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 5%;
+    width: 60%;
+    margin: auto;
+}
+
+.grid-child {
+    background-image: linear-gradient(#674D95, #2B2D66);
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.0782);
+    height: 432px;
+    width: 370px;
+}
+
+.grid-child img {
+    width: 370px;
+    height: 240px;
+    border-top-left-radius: 12;
+    border-top-right-radius: 12;
+    /* faire passer "au-dessus" bordure*/
+}
+
+.content-article {
+    padding: 30px 25px;
+}
+
+.grid-child h3 {
+    font-family: 'barlow condensed', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+.grid-child p {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+/***** Footer menu/service/social media *****/
+.menu-contact {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    width: 55%;
+    margin: 100px auto 40px;
+}
+
+.menu-contact ul {
+    list-style-type: none;
+    padding-left: 0px;
+    line-height: 2.5;
+}
+
+.menu-contact a {
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #fff;
+}
+
+.social-media img {
+    width: 16px;
+    height: 16px;
+}
+
+.social-media {
+    background-color: #6357F6;
+    padding: 16px 16px;
+    border-radius: 50%;
+    margin: 2px;
+}
+
+.menu-column:nth-child(4) {
+    justify-self: right;
+}
+
+hr {
+    border: 1px solid rgba(255, 255, 255, 0.0797);
+    width: 70%;
+    margin: 0 auto 40px;
+}
+
+/***** End Footer *****/
+.end-footer-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    padding-bottom: 100px;
+}
+
+.link-footer {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: end;
+}
+
+.end-footer-child {
+    width: 100%;
+}
+
+.link-footer a {
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #fff;
 }
