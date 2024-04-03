@@ -10,25 +10,29 @@ body {
     background-image: linear-gradient(to bottom left, #2C2D65, #201F22);
     font-family: 'Barlow', sans-serif;
     color: #fff;
+    font-size: 100%;
+    overflow-x: hidden;
 }
 
 body::before {
     content: '';
-    width: 100%;
-    height: 100%;
+    width: 1050px;
+    height: 1050px;
     background: url('images/deco1.svg') no-repeat;
+    background-size: 100% 100%;
     position: absolute; 
-    left: 70%;
-    top: -15%;
+    left: 55%;
+    top: -100px;
 }
 
 p {
-    line-height: 2.5;
-    color: rgba(255, 255, 255, 0.53)
+    line-height: 3rem;
+    color: rgba(255, 255, 255, 0.53);
+    font-size: 1em;
 }
 
 h4 {
-    font-size: 16px;
+    font-size: 1.4rem;
     font-weight: 400;
     letter-spacing: 3px;
     margin-bottom: 20px;
@@ -40,7 +44,7 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 40px 120px;
+    padding: 50px 10% /*170px*/;
 }
 
 .logo {
@@ -51,72 +55,81 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: end;
-    gap: 30px;
+    gap: 3%;
     width: 100%;
 }
 
 nav a {
     text-decoration: none;
     font-family: 'Barlow', sans-serif;
-    font-size: 20px;
-    /* 14px → 20 px */
+    font-size: 1.2rem;
     color: #fff;
 }
 
 /***** Intro section *****/
+.intro {
+    margin: 170px 0;
+}
 .intro-text {
     display: flex;
     flex-direction: column;
     width: 40%;
     gap: 30px;
-    margin: 50px 10%;
+    margin: 5% 10%;
 }
 
 .intro-text::before {
     content: '';
-    width: 150px;
-    height: 150px;
+    width: 220px;
+    height: 220px;
     background: url('images/deco3.svg') no-repeat;
+    background-size: 100% 100%;
     position: absolute;
-    transform: translate(-50px, -50px);
+    transform: translate(-60px, -50px);
 }
 
 .intro-text::after {
     content: '';
-    width: 100%;
-    height: 190px;
+    width: 250px;
+    height: 250px;
     background: url('images/deco2.svg') no-repeat;
-    /* position: absolute; */
-    /* transform: translate(300px, -50px); */
+    background-size: 100% 100%;
+    position: absolute;
+    transform: translate(380px, 320px);
 }
 
 .intro h1 {
-    font-size: 64px;
+    font-size: 5.4rem;
     font-weight: 300;
     letter-spacing: 4.5%;
 }
 
 .intro h2 {
-    font-size: 32px;
+    font-size: 2.7rem;
     font-weight: 400;
     letter-spacing: 4.5%;
     color: #E8AB36;
 }
 
 .intro p {
-    font-size: 16px;
+    font-size: 1.4rem;
     font-weight: 300;
+    width: 80%;
     letter-spacing: 4.5%;
     color: #EFEFEF;
-    
+}
+
+.buttons {
+    display: flex;
+    gap: 30px;
 }
 
 button {
-    font-size: 14px;
+    font-size: 1.2rem;
     font-weight: 400;
     letter-spacing: 4.5%;
     border-radius: 75px;
-    padding: 10px 30px;
+    padding: 20px 40px;
     background-color: #EFEFEF;
 }
 
@@ -127,68 +140,78 @@ button {
 
 /***** Mid section *****/
 .mid {
+    padding: 10% 0 6%;
     display: grid;
     grid-template-columns: 40% 40%;
     justify-content: center;
-    gap: 5%;
+    gap: 10%;
 }
 
 .mid-grid {
     width: 80%;
+    justify-self: center;
 }
 
-/* .mid h3 {
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 3px;
-    margin-bottom: 20px;
-} */
+.mid-grid img {
+    width: 125%;
+}
+
+.mid-grid:nth-child(2)::before {
+    content: '';
+    width: 300px;
+    height: 300px;
+    background: url('images/Ellipse.svg') no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    transform: translate(100%, 30%);
+}
 
 .mid h1 {
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 300;
-    font-size: 56px;
+    font-size: 4.8rem;
 }
 
 .mid h2 {
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.8rem;
     margin: 40px 0;
+    line-height: 1.5em;
 }
 
 .mid p {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1.4rem;
     color: rgba(255, 255, 255, 0.5);
     margin-bottom: 30px;
 }
 
 /***** Top articles *****/
-.articles {
-    margin: 40px 0;
-}
-
 .top-articles {
     width: 40%;
-    margin: auto;
+    margin: 0 auto 80px;
     text-align: center;
 }
 
-/* .top-articles h3 {
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 3px;
-    margin-bottom: 20px;
-} */
+.top-articles::before {
+    content: '';
+    width: 220px;
+    height: 220px;
+    background: url('images/deco3.svg') no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    transform: translate(-360px, -30px);
+}
 
 .top-articles h1 {
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 300;
-    font-size: 56px;
+    font-size: 4.8rem;
+    margin-bottom: 50px
 }
 
 .top-articles p {
-    font-size: 16px;
+    font-size: 1.4rem;
     font-weight: 400;
 }
 
@@ -196,40 +219,36 @@ button {
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
-    gap: 5%;
-    width: 60%;
+    gap: 3%;
+    width: 85%;
     margin: auto;
 }
 
 .grid-child {
     background-image: linear-gradient(#674D95, #2B2D66);
-    border-radius: 12px;
+    border-radius: 20px;
     border: 2px solid rgba(255, 255, 255, 0.0782);
-    height: 432px;
-    width: 370px;
+    height: 100%;
+    width: 100%;
 }
 
 .grid-child img {
-    width: 370px;
-    height: 240px;
-    border-top-left-radius: 12;
-    border-top-right-radius: 12;
-    /* faire passer "au-dessus" bordure*/
+    width: 100%;
 }
 
 .content-article {
-    padding: 30px 25px;
+    padding: 10% 10%;
 }
 
 .grid-child h3 {
     font-family: 'barlow condensed', sans-serif;
-    font-size: 24px;
+    font-size: 2.1rem;
     font-weight: 300;
     line-height: 1.7;
 }
 
 .grid-child p {
-    font-size: 16px;
+    font-size: 1.4rem;
     font-weight: 400;
     margin-top: 20px;
 }
@@ -237,9 +256,9 @@ button {
 /***** Footer menu/service/social media *****/
 .menu-contact {
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    width: 55%;
-    margin: 100px auto 40px;
+    grid-template-columns: 30% 20% 20% 30%;
+    width: 70%;
+    margin: 200px auto 50px;
 }
 
 .menu-contact ul {
@@ -249,22 +268,22 @@ button {
 }
 
 .menu-contact a {
-    font-size: 16px;
+    font-size: 1.4rem;
     font-weight: 400;
     text-decoration: none;
     color: #fff;
 }
 
 .social-media img {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
 }
 
-.social-media {
+.social-media{
     background-color: #6357F6;
-    padding: 16px 16px;
+    padding: 18px 22px;
     border-radius: 50%;
-    margin: 2px;
+    margin: 5px;
 }
 
 .menu-column:nth-child(4) {
@@ -298,8 +317,12 @@ hr {
     width: 100%;
 }
 
+.end-footer-child p {
+    font-size: 1.4rem;
+}
+
 .link-footer a {
-    font-size: 16px;
+    font-size: 1.4rem;
     font-weight: 400;
     text-decoration: none;
     color: #fff;
